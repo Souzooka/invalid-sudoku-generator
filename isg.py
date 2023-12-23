@@ -77,8 +77,14 @@ def main():
     # Place random numbers in the subgrid
     for subgrid in range(9):
         nums_placed = 0
+        picked_cells = set()
         while nums_placed < numbers_per_cell:
             x, y = pick_cell(subgrid)
+            while (x, y) in picked_cells:
+                x, y = pick_cell(subgrid)
+
+            picked_cells.add((x, y))
+
             n = random.choice(pool)
             if check_conflict(grid, x, y, n):
                 continue
