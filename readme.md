@@ -1,0 +1,1 @@
+Small script I made in 20 or so minutes after I saw someone playing Games Explosion! for the GBA on a stream and chat noticed the Sudoku mode only generated invalid puzzles.
