@@ -83,11 +83,12 @@ def main():
             while (x, y) in picked_cells:
                 x, y = pick_cell(subgrid)
 
-            picked_cells.add((x, y))
-
             n = random.choice(pool)
             if check_conflict(grid, x, y, n):
                 continue
+
+            picked_cells.add((x, y))
+
             grid[x][y] = n
             nums_placed += 1
 
